@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "제이문자",
+    "version": "1.0",
+    "description": "제이문자를 위한 크롬 확장프로그램 입니다.",
+    "action": {
+      
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": ["windows", "scripting", "storage"]
+  }
+  

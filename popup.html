@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> <!-- CSS 파일 연결 -->
+  <title>제이문자 폰문자 발송</title>
+</head>
+<body>
+  <h1>제이문자 폰문자 발송</h1>
+  
+  <!-- API 인증 정보 입력 -->
+  <input type="text" id="username" placeholder="아이디를 입력하세요"><br>
+  <input type="password" id="password" placeholder="API KEY를 입력하세요"><br>
+  <button id="saveAuth">저장</button><br><br>
+  
+  <!-- 문자 메시지 입력 및 발송 -->
+  <input type="text" id="title" placeholder="제목을 입력하세요"><br>
+  <textarea id="message" placeholder="내용을 입력하세요" rows="8"></textarea><br>
+  <textarea id="reqlist" placeholder="수신번호를 입력하세요" rows="8"></textarea><br>
+  <br>
+
+  <div style="display: flex; align-items: center;">
+  <input type="radio" id="nowsend" name="resfg" value="N" checked> 즉시발송 
+  <input type="radio" id="ressend" name="resfg" value="Y"> 예약발송 <br>
+  </div>
+
+  <div id="ressend_set" style="display: none;margin-top:20px;">
+    날짜 <input type="date" id="res_date" name="res_date"> 시간 <input type="time" id="res_time" name="res_time">
+  </div>
+  <br><br>
+  <button id="send">발송</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
